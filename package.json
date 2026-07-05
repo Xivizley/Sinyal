@@ -1,0 +1,36 @@
+{
+  "name": "sinyal-desktop",
+  "version": "1.0.0",
+  "description": "Sinyal - Masaüstü Uygulaması",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder -mwl",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.xivizley.sinyal",
+    "productName": "Sinyal",
+    "files": ["main.js", "preload.js", "icon.png"],
+    "win": {
+      "target": ["nsis", "portable"],
+      "icon": "icon.png"
+    },
+    "mac": {
+      "target": ["dmg", "zip"],
+      "icon": "icon.png",
+      "category": "public.app-category.social-networking"
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "icon": "icon.png",
+      "category": "Network"
+    }
+  }
+}
