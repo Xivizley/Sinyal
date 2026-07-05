@@ -2,6 +2,7 @@
   "name": "sinyal-desktop",
   "version": "1.0.0",
   "description": "Sinyal - Masaüstü Uygulaması",
+  "author": "Xivizley <info@xivizley.xyz>",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
